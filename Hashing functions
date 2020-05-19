@@ -1,0 +1,20 @@
+// ex- phno(10 power 10), names, emp ids,...(i.e large values) 
+// we make a hash table.
+
+How hash functions work?
+
+-should always map the large key to the same small key
+-should always generate values from 0 to m-1 (m is the size of hash table)
+-should be fast, O[1] for integer and O[length] for strings
+-(very imp) should uniformly distribute large keys into hash table slots
+
+Example hash funtions -
+
+1. h(large_key) = large_key % m (for large integers like phone numbers) // m is the closest prime number to the number of keys. 
+   Don't take power of 2 or 10. This is not the best hash function.
+
+2. for strings, weighted sum
+str[]="abcd"
+str[0]*x^0+...+str[3]*x^3
+
+3. Universal hashing - group of hash functions. Randomly pick one hash function and use it. Makes sure that time is O[1].
