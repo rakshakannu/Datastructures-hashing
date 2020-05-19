@@ -1,0 +1,4 @@
+-handles search, insert and delete for small number of keys using a bool array.[0-999].
+-handle also small range values, like ascii values.
+-can't handle large keys and floating point numbers. keys can't be strings also.
+-hence we introduce the idea of hashing.
