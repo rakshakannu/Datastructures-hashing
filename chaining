@@ -1,0 +1,25 @@
+// idea - maintain an array of linked list headers
+// add one more node of linked list of there is a collision
+
+// Performance of chaining
+
+m = no of slots in the hash table
+n = no of keys to be inserted
+load factor alpha  = n/m          //we need load factor to be small
+expected chain length = alpha 
+expected time to search = O[1+alpha]
+expected time to insert and delete = O[1+alpha]
+
+// Data structures to store chains
+
+1. linked list:
+search, delete, insert = O[l] where l is the length of chain
+linked list is not cache friendly, and needs extra space to make new nodes
+
+2. Dynamic sized arrays:
+search, delete, insert = O[l] where l is the length of chain
+(arraylist in java)
+they are cache friendly
+
+3. self balancing BST (AVL tree, Red black tree)
+search, delete, insert = O[log(l)]
