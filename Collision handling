@@ -1,0 +1,10 @@
+//if we know keys in advance, then we can do perfect hashing ( no collisions ). It's an advanced method. Used to build dictioneries ...
+//if we do not know the keys, then we use one of the following,
+- chaining
+- open addressing -- - linear probing, quadratic probing, double hashing
+
+// birthday paradox
+23 people - 50 percent chance of same birthday
+50 people - 99.99 percent chance of same birthday
+                      
+
