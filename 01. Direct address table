@@ -2,3 +2,5 @@
 -handle also small range values, like ascii values.
 -can't handle large keys and floating point numbers. keys can't be strings also.
 -hence we introduce the idea of hashing.
+
+this method is good for simple implementation of insert, delete, search in O(1) time.
