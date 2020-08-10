@@ -7,6 +7,8 @@ Hashing is not used in the following:
 - sorted data   // Avl tree or red black tree 
 - prefix searching   // trie
 
+hashing is expert when it comes to insert, delete, and search which does it in O(1).
+
 Applications of hashing:
 - dictionaries
 - database indexing
