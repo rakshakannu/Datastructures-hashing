@@ -1,0 +1,42 @@
+// this is another way of handling collisions
+// the idea is to use a single array only
+condition:
+no of slots in hashtable >> no of keys to be inserted
+
+// advantage of open adressing over chaining is, it is CACHE friendly.
+
+// there are multiple ways of implementing open adressing 
+1. linear probing
+2. quadratic probing
+3. double hashing
+
+// linear probing
+
+linear probing - linearly searching for next empty slot when there is a collision. 
+if we are in the last slot, and that is occupied, we start searching in a circular manner.
+
+// search in linear probing
+1. compute hash function
+2. search for that index and compare 
+3. if we find, return true. otherwise linearly search.
+4. we stop searching when we either find the key or we find an empty slot[ beacuse if we didnt find it at i position, and when we have reached an empty slot, that means it is
+not there ] or we have travered through the whole table. ( 3 cases )
+
+// delete in linear probing
+
+we cannot simply make the slot empty.
+we dont stop searching when we see a deleted slot, we stop when we see an empty slot. 
+the insert can however insert in a deleted slot
+
+CLUSTERING - a problem using linear probing
+
+due to the problem of clustering, all the operations become costly.
+they impact the performance of the linear probing.
+
+How to handle clustering with linear probing?
+1. quadratic probing (secondary clusters ) - i^2 - prevents clustering
+Disadvantage - might not find an empty slot even if there is an empty slot.
+
+best case: alpha<0.5 , i.e loadfactor < 0.5 . loadfactors = (no. of keys inserted)/ (no of slots in the hash table) || n/m, where m is prime. then quadratic probing works.
+
+2. double hashing 
