@@ -1,0 +1,11 @@
+// in double hashing, we use 2 hash functions
+// one is the original function that we discussed, the second one find the next slot like probing for a free slot.
+// you will always find a free slot
+// avoids clusters - which means it distributes the keys more uniformly comapred to linear/quadratic probing.
+
+ hash(key,i) = (h1(key) + ih2(key))% m
+ 
+ // why h2(key) and m should be relatively prime?
+ it fulfills the requirements of linear probing. this will always find a free slot, if there is a free slot.
+ 
+ 
