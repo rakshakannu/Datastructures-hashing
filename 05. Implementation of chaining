@@ -1,0 +1,38 @@
+EXAMPLE-
+// whenever there will be collision, we will be using linkedlist for chaining.
+// basically, we will be creating an array of linkedlist
+// We need to insert, delete, and search for the element given bucket size 7.
+
+// design a class in java or a structure in cpp, that will search, delete, search operations with chaining using linkedlist.
+
+class myHash
+{
+	int BUCKET;
+	ArrayList<Linkedlist<Integer>> table;
+	
+	myHash(int b)
+	{
+		BUCKET = b;
+		table = new ArrayList<Linkedlist<Integer>>();
+		for(int i=0;i<b;i++)
+			table.add(new Linkedlist<Integer>());
+	}
+	
+	void insert(int key)
+	{
+		int i = key % BUCKET;
+		table.get(i).add(key);
+	}
+	
+	void remove(int key)
+	{
+		int i = key % BUCKET;
+		table.get(i).remove((Integer)i); // there are 2 versions of .remove, 1. index, 2. object. we are using the object one.
+  }
+	
+	boolean search(int key)
+	{
+		int i = key % BUCKET;
+		return table.get(i).contains(key);
+	}
+}
