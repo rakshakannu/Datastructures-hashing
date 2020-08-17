@@ -1,0 +1,11 @@
+// chaining
+1. hash table never fills
+2. lass sensitive to hash functions
+3. poor cache performance
+4. extra space for links
+
+// open addressing
+1. table may become full and resizing becomes mandatory
+2. extra care required for clustering
+3. cache friendly
+4. extra space might be required to achieve same performance as chaining 
