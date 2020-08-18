@@ -1,0 +1,48 @@
+// given an array of elements, count the frequecy of the every distinct element.
+
+// naive solution
+
+// we need to handle the repeatitions in the array
+// use a flag variable and ensure that we dont count the frequencies of the array multiple times.
+// we make sure that by going to the left of it and checking if the element has already appeared or not.
+
+(solution given in video)
+
+time - O(n square)
+space - O(1) space
+
+// efficient solution
+// use a hashmap to insert the element along with its frequency 
+// GFG code
+
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+
+class Distinct
+{
+    public static void main (String[] args) {
+        int arr[] = new int[]{15, 16, 27, 27, 28, 15};
+        int n = arr.length;
+        
+        countFreq(arr, n);
+    }
+    
+    static void countFreq(int arr[], int n)
+    {
+        Map<Integer, Integer> hmp = new HashMap<Integer, Integer>();
+        for(int i = 0; i < n; i++)
+        {
+            int key = arr[i];
+            if(hmp.containsKey(arr[i]) == true)
+              hmp.put(arr[i], hmp.get(arr[i]) + 1);
+            else
+              hmp.put(arr[i], 1);    
+        }
+    
+       for(Map.Entry<Integer, Integer> itr: hmp.entrySet())
+        System.out.println(itr.getKey() + " " + itr.getValue());
+    }
+}
+
+// to print the frequencies in the same order as it was present in the array, we can use linked HashMap.
