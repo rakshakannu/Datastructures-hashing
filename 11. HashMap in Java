@@ -1,0 +1,25 @@
+// used for solving many problems on hashing
+// hashset is used to store keys, where as hashmap is used to store key value pairs.
+// hashmap<type of keys, type of value>
+
+// hashmap implements map interface
+
+// insert in hashmap
+m.put("gfg",10);
+
+// traversing a hashmap
+for(map.Entry<String,Integer> e: m.entrySet())
+  System.out.println(e.getkey() + " " +e.getvalue());
+  
+// there is no particular order in which we'll get output.
+
+// more functions of hashmap
+m.containsKey() - used to check if key is present or not
+m.remove()
+m.size()
+m.containsValue()
+m.get() - to get the corresponding value of the key in hashmap. if there is no value, it will return null.
+
+// time complexities 
+put(), remove(), containsKey(), get(), - O(1) on average
+contains() - O(1) in worst case
