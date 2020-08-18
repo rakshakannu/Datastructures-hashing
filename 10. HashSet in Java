@@ -1,1 +1,41 @@
+REMEBER: hashset can be used when there has to be insert, delete, search operations, or a subset of these operations on a collection of items.
+
 // hashset is used to store a set of keys, and it used hash tables to store these keys, and hash functions to convert these keys to functions in the hash table.
+
+// the three main functions are add(), remove() and contains().
+
+// Syntax - HashSet<non-primitive datatype>
+
+// example
+
+.add()
+.contains()
+.iterator()
+.next() - prints the items until there are items
+
+HashSet<String> h = new HashSet<String>();
+h.add("gfg");
+h.add("courses");
+
+System.out.print(h) // output - [gfg courses]
+System.out.print(h.contains("gfg")) // output - true
+
+Iterator<String> i = h.iterator();
+while(i.hasNext())
+  System.out.print(i.next+" ");
+
+// .add() function
+it ignores the item if it is already present in the hash table, and does not add the duplicate. it then returns false.
+
+// when we traverse the hashset, there is no gaurantee of any order in the output. 
+
+// more function of hash
+.size() - will return the size
+.remove() - removes the item from hashset
+.isEmpty() - hashset is empty or not
+.clear() - used to clear the content of the hashset. it is important when the same hashset is used for multiple testcases.
+
+// time complexity
+
+.add(), .remove(), .contains() - all O(1) on average
+.size(), .isEmpty() - O(1)
