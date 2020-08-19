@@ -1,0 +1,63 @@
+// given two unsorted arrays, we need to find the intersection of the two arrays.
+// the problem will be easier if both the arrays have distinct elements.
+// we need to count distinct common elements
+
+// idea
+traverse on the array and first check if the element already appeared on the left of it. then check if that element appears in the second array.
+
+// naive solution
+time: O(m*(m+n))
+
+int intersection(int a[], int b[], int m, int m)
+{
+	int res=0;
+	for(int i=0;i<m;i++)
+	{
+	  //check of the element is present in the left of the array
+		boolean flag=false;
+		for(int j=i;j>=0;j--)
+		{
+			if(a[j]==a[i])
+				flag=true;
+				break;
+		}
+		if(flag==true)
+			continue; // we dont want to execute the below statement for that repeating element.
+	}
+	// search for element in the second array
+	for(int j=0;j<n;j++)
+	{
+		if(a[i]==b[j])
+			res++;
+			break;
+	}
+  return res;
+}
+
+// efficient solution
+// O(m+n) - time
+// O(m) - space (for the new HashSet)
+
+// idea
+1.insert all the elements of the first array into the hashset
+2. traverse through the second array and if found, we increment the result and remove the element from the hashset
+
+TRICK: we are deleting the element from the hashset so that there wont be repetitive elements in the result.
+
+int intersection(int a[], int b[], int m, int n)
+{
+	HashSet<Integer> s = new Hashset<Integer>();
+	for(int i=0;i<m;i++)
+	{
+		s.add(a[i]);
+	}
+	
+	int res=0;
+	for(int j=0;j<n;j++)
+	{
+		if(s.contains(b[j])
+			res++;
+			s.remove(b[j]) // trick to not have repetitive elements in the result.
+	}
+	return result;
+}
