@@ -1,0 +1,3 @@
+// given two unsorted arrays, we need to find the intersection of the two arrays.
+// the problem will be easier if both the arrays have distinct elements.
+// we need to count distinct common elements
