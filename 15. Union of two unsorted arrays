@@ -1,0 +1,17 @@
+// we need to find count of elements in the union of these two arrays.
+// we need to ignore the duplicates
+
+// naive solution
+1. create a array c[m+m] and copy the contents of both the array into this array
+2. for every element check if the element is present in the left of the array or not. then return result. use flag varaible to break loop.
+
+// efficient solution - 1
+// uses auxillary array
+put all the elements into a new array and add them to the hashtable and return the size of the hashtable.
+
+// efficient solution -2 
+// does not use auxillary array
+// simple add the elements of one in the hashset and the second in the hashset, and return the size.
+
+time: O(m+n) - contant
+space: O(m+n) / theta(m+n)
