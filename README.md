@@ -20,3 +20,6 @@ Applications of hashing:
 - symbol tables in compilers/ interpreters
 - routers
 - getting data from databases ...
+
+# Sorting a hashmap
+https://www.javatpoint.com/how-to-sort-hashmap-in-java
